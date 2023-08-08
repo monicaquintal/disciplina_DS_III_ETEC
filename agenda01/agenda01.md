@@ -43,6 +43,13 @@ de desempenhar uma ação para esse clique, por meio do método associado a ele.
 <em>
 "Envie para o seu tutor um vídeo mostrando a tela do celular com o projeto realizado por você na etapa “Você no comando”. Envie também os códigos utilizados. Aproveite para customizar o projeto "JogoDescubraNumero” com suas cores e uma imagem escolhida por você."
 </em>
+<br>
+
+<div align="center">
+
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/b7ae5489-bf1a-4c19-93e1-4d21c4ede93e
+
+</div>
 
 --- 
 
