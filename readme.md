@@ -13,6 +13,5 @@
 ## Conteúdo
 
 [Agenda 01: Trabalhando com áudio e utilizando o atributo OnClick no button.](./agenda01/agenda01.md)<br>
-
-</div>
+[Agenda 02: Compartilhar fotos.](./agenda02/agenda02.md)<br>
 
