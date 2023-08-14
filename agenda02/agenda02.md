@@ -182,6 +182,10 @@ Name | share_Foto | Definir o nome do componente.
 
 > Vídeo tutorial [aqui](https://www.youtube.com/watch?v=h3TlX_PiIt4).
 
+### Importante:
+
+Para correção do erro 201, acessar [esse vídeo](https://www.youtube.com/watch?v=zez3ohGtUUE).
+
 ---
 
 ## Fichário
