@@ -194,6 +194,12 @@ Para correção do erro 201, acessar [esse vídeo](https://www.youtube.com/watch
 <br>
 Aproveite para customizar o projeto “Compartilhar” com suas cores e uma imagem escolhida por você."
 
+<div align="center">
+
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/84c2d88b-d5bd-44df-9d9b-e88de91f02bf
+
+</div>
+
 --- 
 
 [Voltar ao início.](https://github.com/monicaquintal/disciplina_DS_III_ETEC)
