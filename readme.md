@@ -1,7 +1,7 @@
 <div align="center">
 <a href="https://github.com/monicaquintal" target="_blank"><img align="right" height="100" src="https://www.svgrepo.com/show/477108/computer.svg" /></a>
-<h2>Disciplina: Desenvolvimento de Sistemas III - ETEC</h2>
-<p>Repositório para atividades estudadas e desenvolvidas ao longo do 3° semestre.</p>
+<h2>Desenvolvimento de Sistemas III - ETEC</h2>
+<p>Repositório para atividades estudadas e desenvolvidas ao longo do 3° semestre da Disciplina.</p>
 </div>
 
 <a href="https://github.com/monicaquintal" target="_blank"><img align="left" height="40" src="https://www.svgrepo.com/show/477093/mobile-phone-signal.svg"/></a>  
