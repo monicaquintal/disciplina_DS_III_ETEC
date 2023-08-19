@@ -76,7 +76,11 @@ Android, em alguns computadores e em outros dispositivos. F
 <br>
 Envie também o arquivo .aia. Aproveite para customizar o projeto “BancoSQL” com as suas cores e uma imagem escolhida por você."
 
+<div align="center">
+  
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/86ba7092-6fd8-4b77-a482-1c01f3d0e1d9
 
+</div>
 
 --- 
 
