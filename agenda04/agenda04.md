@@ -41,9 +41,15 @@ páginas WEB, para que certos serviços não sejammexecutados por Robôs.
 - utilizadas por meio de serviços disponíveis em sites/servidores de conteúdo.
 - para o seu funcionamento é necessário seguir alguns padrões de criação e comunicação, utilizando protocolos de comunicação e códigos XML, JSON, entre outros.
 
-> disponibilizado link da API responsável por receber um determinado CEP por meio da sua URL, e retornar um arquivo JSON com as informações do CEP consultado.
+> disponibilizado [link do site Cep Aberto](https://www.cepaberto.com/), que possui uma API responsável por receber um determinado CEP por meio da sua URL, e retornar um arquivo JSON com as informações do CEP consultado.
 
+## 1.2 arquivos de retorno utilizados pela maioria dos serviços WEB:
 
+### a) Extensible Markup Language (XML)
+
+- XML é um arquivo de marcação muito utilizado na Internet e em serviços WEB.
+- desenvolvido pela W3C com o propósito de organizar textos, banco de dados, desenhos, etc. Essa organização ocorre hierarquicamente de
+maneira extensível, ou seja, os marcadores são customizáveis, garantindo a sua utilização nos mais diversos cenários
 
 
 
