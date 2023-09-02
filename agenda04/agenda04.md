@@ -139,7 +139,7 @@ print(response.json())
 
 <div align="center">
 
-https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/dacaace4-63d9-4ed0-bc21-4616d2ea2c09
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/74fc17fc-7717-4144-8321-c5d4865e54e2
 
 </div>
 
