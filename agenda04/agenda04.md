@@ -108,7 +108,7 @@ print(response.json())
 
 - conteúdo do arquivo JSON com a resposta do CEP, exibida pelo navegador WEB que utilizamos na consulta:
 
-~~~json
+~~~
 {
   'latitude': '-23.4336578',
   'longitude': '-45.0838481',
@@ -126,6 +126,7 @@ print(response.json())
 - criar um projeto chamado “APICep”.
 
 > Vídeo [Agenda 04 - Criando a interface consumindo API](https://www.youtube.com/watch?v=-3lgRiaPg9Q).
+<br>
 > Vídeo [Agenda 04 - Criando a programação de Blocos Consumindo API](https://www.youtube.com/watch?v=FvAG3KdTlxA).
 
 --- 
@@ -135,7 +136,6 @@ print(response.json())
 <em>
 "Dando continuidade ao aplicativo “ConsultaCEP”, desenvolvido na seção "Você no Comando", altere-o para que ele exiba também o CEP consultado na mensagem de retorno."
 </em>
-
 
 
 
