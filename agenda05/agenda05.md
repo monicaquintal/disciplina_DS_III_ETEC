@@ -32,6 +32,7 @@
 <div align="center">
 <img src="./projects/lista-permissoes-normais.png" width="60%"/><br/>
 <em>Principais “Permissões Normais”.</em>
+<br>
 </div>
 
 ## 3. Permissões Perigosas
@@ -43,6 +44,7 @@
 <div align="center">
 <img src="./projects/lista-permissoes-perigosas.png" width="60%"/><br/>
 <em>Principais “Permissões Perigosas”.</em>
+<br>
 </div>
 
 - todos os recursos da lista de “Permissões Perigosas” são pertinentes, mas destaca-se o uso da localização por GPS, utilização de chamadas de voz, utilização de SMS, calendário, câmera e até mesmo acesso aos arquivos e contatos do dispositivo.
@@ -73,8 +75,11 @@
 "Altere o aplicativo “Permissao”, excluindo a permissão de acesso para a câmera do dispositivo e inclua uma permissão para o aplicativo acessar o GPS. Salve seu projeto e envie juntamente para seu professor um vídeo ou prints de tela apresentando seu funcionamento."
 </em>
 
+<div align="center">
 
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/83b5993d-4725-4c35-ae72-8c4a817545a8
 
+</div
 
 ---
 
