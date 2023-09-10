@@ -17,3 +17,4 @@
 [Agenda 03: Manipulação de Banco de Dados Local no Dispositivo.](./agenda03/agenda03.md)<br>
 [Agenda 04: Consumindo API e serviços WEB.](./agenda04/agenda04.md)<br>
 [Agenda 05: Permissões.](./agenda05/agenda05.md)<br>
+[Agenda 06: Widgets.](./agenda06/agenda06.md)<br>
