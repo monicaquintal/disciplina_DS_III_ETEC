@@ -67,6 +67,7 @@ maior.
 
 <em>
 "Altere o projeto "utilitário" desenvolvido anteriormente, para que a cor do “Text” que exibe a porcentagem da bateria, mude de cor de acordo com os seguintes valores:
+<br>
 
 - De 100% até 50% exibir a cor “Branca”.
 - De 49% até 15% exibir a cor “Laranja”.
@@ -75,6 +76,11 @@ maior.
 Efetue pesquisas na Internet e na documentação oficial do Kodular para alcançar o objetivo proposto na atividade."
 </em>
 
+<div align="center">
+
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/a9f36f0f-10ee-481a-a066-4bef84d66ddf
+
+</div>
 
 ---
 
