@@ -76,6 +76,20 @@ TYPE_TEMPERATURE | Hardware | Mede a temperatura do dispositivo em graus Celsius
 
 ## 4. Trabalhando com Sensores
 
+- inicialmente, pesquisar a [documentação oficial do Android](https://developer.android.com/guide/topics/sensors?hl=pt-br) para conhecer a forma correta de trabalho para cada sensor.
+- no projeto que será desenvolvido, vamos utilizar um sensor de luz, que captura o valor de iluminação recebida por um determinado dispositivo. 
+
+## 5. Projeto - "Sensores"
+
+- Criando a [Interface Sensores](https://www.youtube.com/watch?v=7mjViEAlJiA).
+- Desenvolvendo a [Programação em Blocos](https://www.youtube.com/watch?v=uuyHxX8j9BM).
+
+---
+
+## Fichário:
+
+- Altere o projeto “Sensores”, para que seja mostrada na tela do usuário, além dos valores atuais, o maior valor encontrado e o menor valor encontrado de luminosidade.
+
 
 
 
