@@ -90,13 +90,11 @@ TYPE_TEMPERATURE | Hardware | Mede a temperatura do dispositivo em graus Celsius
 
 - Altere o projeto “Sensores”, para que seja mostrada na tela do usuário, além dos valores atuais, o maior valor encontrado e o menor valor encontrado de luminosidade.
 
+<div align="center">
 
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/5e18a653-c5d4-47d3-ac61-0fd05f63e0e1
 
-
-
-
-
-
+</div>
 
 ---
 
