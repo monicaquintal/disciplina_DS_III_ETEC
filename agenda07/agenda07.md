@@ -4,7 +4,7 @@
 <p>Desenvolvimento de Sistemas III - ETEC</p>
 </div>
 
-<div id="agenda06" align="center">
+<div id="agenda07" align="center">
 <h2>Agenda 07: Sensores.</h2>
 </div>
 

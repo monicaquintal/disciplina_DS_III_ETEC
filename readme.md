@@ -19,3 +19,4 @@
 [Agenda 05: Permissões.](./agenda05/agenda05.md)<br>
 [Agenda 06: Widgets.](./agenda06/agenda06.md)<br>
 [Agenda 07: Sensores.](./agenda07/agenda07.md)<br>
+[Agenda 08: Localização.](./agenda08/agenda08.md)<br>
