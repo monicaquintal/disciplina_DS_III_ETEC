@@ -53,8 +53,11 @@ Precisão de variação | As estimativas de localização provenientes de cada f
 - Construção da interface do [aplicativo Localizacao](https://www.youtube.com/watch?v=JoKmxyaFj10).
 - Criando a programação em blocos [GPS](https://www.youtube.com/watch?v=t38VvJ3l_do).
 
+---
 
+## Fichário
 
+"Atualize o projeto “Localizacao” para que além da Latitude e Longitude, seja exibida também a Altitude da posição geográfica onde o dispositivo está localizado. Verifique na Figura 6 a nova interface para o usuário."
 
 
 
