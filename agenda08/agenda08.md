@@ -59,7 +59,11 @@ Precisão de variação | As estimativas de localização provenientes de cada f
 
 "Atualize o projeto “Localizacao” para que além da Latitude e Longitude, seja exibida também a Altitude da posição geográfica onde o dispositivo está localizado. Verifique na Figura 6 a nova interface para o usuário."
 
+<div align="center">
 
+https://github.com/monicaquintal/disciplina_DS_III_ETEC/assets/111545468/daf0610b-ab2e-48c6-a106-16fd85482291
+
+</div>
 
 ---
 
