@@ -276,6 +276,40 @@ echo '<br>';
 - com o resultado, percebemos que não foi alterado o nome para “protegido”, isso acontece, pelo fato do atributo agora ser privado e seu acesso deve ser realizado apenas pelos métodos públicos da classe Pessoa.
 - obs.: Em PHP não é gerado erro pelas particularidades da sua concepção nos tipos de variáveis.
 
+---
+
+## Você no comando
+
+1. Crie três classes em PHP e teste de acordo com o Diagrama de Classe a seguir. Obs: Não se esqueça de criar os métodos getters e setters.
+- [Pessoa.php](./projects/voceNoComando/Pessoa.php).
+- [Professor.php](./projects/voceNoComando/Professor.php).
+- [Aluno.php]().
+
+<div align="center">
+<img src="./projects/voceNoComando/assets/voce-no-comando-diagrama.png" width="30%"><br>
+</div>
+
+2. Para testar crie:
+  a. Uma página Index.<br>
+  b. Um objeto Professor.<br>
+  c. Um objeto Aluno.<br>
+  d. Crie os respectivos atributos das classes Professor e Aluno.<br>
+    - Não esqueça de atribuir também nos atributos da superclasse.
+  e. Exiba os dados dos atributos de ambos objetos (professor e aluno) no Navegador.
+
+> teste [aqui](./projects/voceNoComando/index.php).
+
+---
+
+## Fichário
+
+<em>
+"Agora o Zeca consegue desenvolver em PHP utilizando o paradigma de Programação Orientado a Objetos, com isso, foi aberto um leque de possibilidades e ele passou a receber diversas propostas de trabalho. Uma delas foi um contrato como freelancer para programação de um projeto hospitalar que deverá ser desenvolvido em PHP. Para conseguir entregar o projeto no prazo solicitado, Zeca precisará de sua ajuda!
+<br>
+Imagine que você ficou responsável por criar a classe Paciente, de acordo com o Diagrama de Classe (nome, rg, cpf, endereco, profissao), e por criar os métodos Getters e Setters.
+<br>
+Após a criação da classe e dos seus métodos, envie o arquivo para o seu professor-tutor juntamente com os prints comprovando o funcionamento da tela por meio do AVA."
+</em>
 
 ---
 
