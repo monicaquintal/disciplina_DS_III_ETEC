@@ -209,9 +209,72 @@ $j->setCnpj("222222222");
 echo 'CNPJ: '.$j->getCnpj();
 ~~~
 
+- o resultado é simples, porém não mostra o funcionamento da herança propriamente dita, para isso vamos alterar o index e ver o resultado no navegador.
+  - Primeiro passo: remover o objeto “p” do index.
+  - Segundo Passo: atribuir nome nos objetos “f” e “j”.
+  - Terceiro passo: exibir no navegador.
 
+~~~php
+include_once 'Fisica.php';
+include_once 'Juridica.php';
 
+$f = new Fisica();
+$f->setNome("Zeca");
+$f->setCpf("111111111");
+echo 'Nome: '.$f->getNome().'<br>';
+echo 'CPF: '.$f->getCpf();
+echo '<br>';
 
+$j = new Juridica();
+$j->setNome("Industria Zeca");
+$j->setCnpj("222222222");
+echo 'Nome: '.$j->getNome().'<br>';
+echo 'CNPJ: '.$j->getCnpj();
+~~~
+
+- ***observação***:
+  - não foi mais necessário utilizar o include da classe pessoa, já que não instanciamos nenhum objeto de sua classe.
+  - nesse código já percebemos o uso da herança, visto que as classes filhas (Física e jurídica) não possuem o método setNome e nem o atributo nome; porém, como a classe pai “Pessoa” possui este método (setNome) e atributo (nome), as classes filhas (Física e Jurídica) os recebem como herança, e podem fazer uso deles sem nenhum problema.
+
+### Utilizando protected:
+
+- em Fisica.php:
+
+~~~php
+require_once 'Pessoa.php';
+
+class Fisica extends Pessoa {
+  private $cpf;
+
+  public function setCpf($cpf) {
+    $this->cpf = $cpf;
+  }
+
+  public function getcpf() {
+    return $this->cpf;
+  }
+
+  public function mudarNome() {
+    $this->nome = "Protegido";
+  }
+}
+~~~
+
+- o valor é atribuído em nome da mesma forma que na classe pai. Isso porque foi utilizado o modificador protected, relembrando que eles deixam o atributo com acesso total para as classes filhas. 
+- agora, vamos mudar o index para conseguir realizar o teste e perceber a função “protected” em herança.
+
+~~~php
+$f = new Fisica();
+$f->setNome("Monica");
+$f->setCpf("111111111");
+$f->mudarNome();
+echo 'Nome: '.$f->getNome().'<br>';
+echo 'CPF: '.$f->getCpf();
+echo '<br>';
+~~~
+
+- com o resultado, percebemos que não foi alterado o nome para “protegido”, isso acontece, pelo fato do atributo agora ser privado e seu acesso deve ser realizado apenas pelos métodos públicos da classe Pessoa.
+- obs.: Em PHP não é gerado erro pelas particularidades da sua concepção nos tipos de variáveis.
 
 
 ---

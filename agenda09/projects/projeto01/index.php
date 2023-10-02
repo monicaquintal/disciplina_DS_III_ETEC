@@ -10,22 +10,21 @@
 <h2>
 
   <?php
-    include_once 'Pessoa.php';
     include_once 'Fisica.php';
     include_once 'Juridica.php';
 
-    $p = new Pessoa();
-    $p->setNome("Monica");
-    echo 'Nome: '.$p->getNome();
-    echo '<br>';
-
     $f = new Fisica();
+    $f->setNome("Monica");
     $f->setCpf("111111111");
+    $f->mudarNome();
+    echo 'Nome: '.$f->getNome().'<br>';
     echo 'CPF: '.$f->getCpf();
     echo '<br>';
 
     $j = new Juridica();
+    $j->setNome("Monica LTDA");
     $j->setCnpj("222222222");
+    echo 'Nome: '.$j->getNome().'<br>';
     echo 'CNPJ: '.$j->getCnpj();
   ?>
 
