@@ -309,7 +309,7 @@ echo '<br>';
 Imagine que você ficou responsável por criar a classe Paciente, de acordo com o Diagrama de Classe (nome, rg, cpf, endereco, profissao), e por criar os métodos Getters e Setters.
 <br>
 Após a criação da classe e dos seus métodos, envie o arquivo para o seu professor-tutor juntamente com os prints comprovando o funcionamento da tela por meio do AVA."
-</em>
+</em><br>
 
 > Desenvolvimento da atividade [aqui](./projects/monicaQuintal_agenda09_ds_iii).
 
