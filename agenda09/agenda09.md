@@ -311,6 +311,8 @@ Imagine que você ficou responsável por criar a classe Paciente, de acordo com 
 Após a criação da classe e dos seus métodos, envie o arquivo para o seu professor-tutor juntamente com os prints comprovando o funcionamento da tela por meio do AVA."
 </em>
 
+> Desenvolvimento da atividade [aqui](./projects/monicaQuintal_agenda09_ds_iii).
+
 ---
 
 [Voltar ao início.](https://github.com/monicaquintal/disciplina_DS_III_ETEC)
