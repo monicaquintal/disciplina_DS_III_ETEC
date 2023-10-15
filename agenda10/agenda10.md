@@ -48,7 +48,7 @@
 
 - responsável pela modelagem e manipulação de informações de forma detalhada.
 - todas as entidades / classes, consultas, cálculos e regras de negócio do site ou sistema devem permanecer nessa camada.
-- tem acesso a toda e qualquer informação modelada ou não, proveniente,na maioria dos casos,de um Banco de Dados ou arquivo XML.
+- tem acesso a toda e qualquer informação modelada ou não, proveniente,na maioria dos casos, de um Banco de Dados ou arquivo XML.
 - exemplo:
   - modela os dados e o comportamento por atrás do processo de negócios.
   - preocupa-se com o armazenamento, manipulação e geração de dados.
@@ -58,7 +58,7 @@
 
 - responsável por apresentar ao usuário final.
 - toda a interface faz parte dessa camada.
-- todos os dados, informações, gráficos etc, quando exibidos para o usuário final,é de responsabilidade desta camada.
+- todos os dados, informações, gráficos etc, quando exibidos para o usuário final, é de responsabilidade desta camada.
 - exemplo:
   - elementos de exibição ao cliente: HTML, XML , ASP , Applets.
   - interface com o usuário.
