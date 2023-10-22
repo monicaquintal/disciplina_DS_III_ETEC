@@ -396,19 +396,381 @@ public function excluirBD($id) {
 }
 ~~~
 
+### c) listaFormacoes():
 
+~~~php
+public function listaFormacoes($idusuario) {
 
+  require_once 'ConexaoBD.php';
 
+  $con = new ConexaoBD();
+  $conn = $con->conectar();
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
 
+  $sql = "SELECT * FROM formacaoAcademica WHERE idusuario = '".$idusuario."'";
+  $re = $conn->query($sql);
+  $conn->close();
+  return $re;
+}
+~~~
 
+---
 
+<div align="center">
+<h2>Você no Comando</h2>
+</div>
 
+<div align="center">
+<img src="./assets/diagrama-logico-experiencia-profissional.png" width="50%">
+<p><em>Diagrama Lógico do Banco de Dados, nomeado por Experiência Profissional.</em></p><br>
+</div>
 
+### Faça o que se pede:
 
+1. Crie a Classe ExperienciaProfissional dentro da Pasta Model, de acordo com o diagrama.
+2. Gere os Atributos de acordo com as informações:
+  - id: código único da experiência cadastrada.
+  - idusuario: código único do usuário.
+  - inicio: início da experiência profissional.
+  - fim: final da experiência profissional.
+  - empresa: local onde obtida a experiência profissional.
+  - descricao: explicação do cargo e aprendizados.
+3. Crie os métodos específicos:
+  - a. inserirBD.
+  - b. excluirBD.
+  - c. lista.
 
+### a) Script SQL para criação da tabela ExperienciaProfissional:
 
+~~~sql
+CREATE TABLE `projeto_final`.`experienciaprofissional` (
+	`idexperienciaprofissional` INT NOT NULL auto_increment,
+    `idusuario` INT NOT NULL,
+    `inicio` DATE NULL,
+    `fim` DATE NULL,
+    `empresa` VARCHAR(45) NULL,
+    `descricao` VARCHAR(45) NULL,
+    PRIMARY KEY (`idexperienciaprofissional`),
+    INDEX `idUser_idx` (`idusuario` ASC),
+    CONSTRAINT `idUser`
+		FOREIGN KEY (`idusuario`)
+		REFERENCES `projeto_final`.`usuario` (`idusuario`)
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION
+);
+~~~
 
+## 1. Criando a Classe ExperienciaProfissional dentro da Pasta Model, de acordo com o diagrama: 
 
+~~~php
+class ExperienciaProfissional {}
+~~~
+
+## 2. Gere os Atributos (e métodos getters e setters):
+
+~~~php
+class ExperienciaProfissional {
+  private $id;
+  private $idusuario;
+  private $inicio;
+  private $fim;
+  private $empresa;
+  private $descricao;
+
+  // Getters e Setters
+
+  // id
+  public function setID ($id) {
+    $this->id = $id;
+  }
+
+  public function getID() {
+    return $this->id;
+  }
+
+  // idusuario
+  public function setIdUsuario ($idusuario) {
+    $this->idusuario = $idusuario;
+  }
+
+  public function getIdUsuario() {
+    return $this->idusuario;
+  }
+
+  // inicio
+  public function setInicio ($inicio) {
+    $this->inicio = $inicio;
+  }
+
+  public function getInicio() {
+    return $this->inicio;
+  }
+
+  // fim
+  public function setFim ($fim) {
+    $this->fim = $fim;
+  }
+
+  public function getFim() {
+    return $this->fim;
+  }
+
+  // empresa
+  public function setEmpresa ($empresa) {
+    $this->empresa = $empresa;
+  }
+
+  public function getEmpresa() {
+    return $this->empresa;
+  }
+
+  // descrição
+  public function setDescricao ($descricao) {
+    $this->descricao = $descricao;
+  }
+
+  public function getDescricao() {
+    return $this->descricao;
+  }
+}
+~~~
+
+## 3. Crie os métodos específicos:
+
+### a) método inserirBD():
+
+~~~php
+public function inserirBD() {
+  require_once 'Conexao.php';
+
+  $con = new ConexaoBD();
+  $conn = $con->conectar();
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  $sql = "INSERT INTO experienciaprofissional (idusuario, inicio, fim, empresa, descricao)
+  VALUES('".$this->idusuario."', '".$this->inicio."','". $this->fim."', '".$this->empresa."', '".$this->descricao."')";
+
+  if ($conn->query($sql) === TRUE) {
+    $this->id = mysqli_insert_id($conn);
+    $conn->close();
+    return TRUE;
+  } else {
+    $conn->close();
+    return FALSE;
+  }
+}
+~~~
+
+### b) Método excluirBD():
+
+~~~php
+public function excluirBD($id) {
+
+  require_once 'ConexaoBD';
+
+  $con = new ConexaoBD();
+  $conn = $con->conectar();
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  $sql = "DELETE FROM experienciaprofissional WHERE idexperienciaprofissional = '".$id ."';";
+
+  if ($conn->query($sql) === TRUE) {
+    $this->id = mysqli_insert_id($conn);
+    $conn->close();
+    return TRUE;
+  } else {
+    $conn->close();
+    return FALSE;
+  }
+}
+~~~
+
+### c) Método listaExperiencias():
+
+~~~php
+public function listaExperiencias($idusuario) {
+
+  require_once 'ConexaoBD.php';
+
+  $con = new ConexaoBD();
+  $conn = $con->conectar();
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  $sql = "SELECT * FROM experienciaProfissional WHERE idusuario = '".$idusuario."'";
+  $re = $conn->query($sql);
+  $conn->close();
+  return $re;
+}
+~~~
+
+---
+
+<div align="center">
+<h2>Fichário</h2>
+</div>
+
+<p><em>
+A equipe Alfa está com tudo! A camada Model do projeto está quase pronta, faltando apenas a última classe: “OutrasFormacoes”. A líder Bia, ofereceu um bônus no salário da equipe alfa, caso consigam entregar a última classe codificada antes do final de semana.
+<br>
+Para colocar em prática os assuntos estudados nessa agenda, ajude a equipe Alfa a desenvolver essa última classe da camada Model.
+<br>
+Com base nos Diagramas Entidade–Relacionamento (DER) e de Classe abaixo, desenvolva a classe “OutrasFormacoes” da camada Model.
+</p></em>
+
+<div align="center">
+<img src="./assets/diagrama-logico-outras-formacoes.png" width="50%">
+<p><em>Diagramas da Classe OutrasFormacoes.</em></p><br>
+</div>
+
+~~~sql
+CREATE TABLE IF NOT EXISTS `projeto_final`.`outrasformacoes` (
+  `idoutrasformacoes` INT(11) NOT NULL AUTO_INCREMENT,
+  `idusuario` INT(11) NOT NULL,
+  `inicio` DATE NULL DEFAULT NULL,
+  `fim` DATE NULL DEFAULT NULL,
+  `descricao` VARCHAR(150) NULL DEFAULT NULL,
+  PRIMARY KEY (`idoutrasformacoes`),
+  INDEX `idusuario_idx` (`idusuario` ASC),
+  CONSTRAINT `fk_idUsuario`
+    FOREIGN KEY (`idusuario`)
+    REFERENCES `projeto_final`.`usuario` (`idusuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = latin1;
+~~~
+
+~~~php
+class OutrasFormacoes {
+  private $idoutrasformacoes;
+  private $idusuario;
+  private $inicio;
+  private $fim;
+  private $descricao;
+
+  // Getters e Setters
+
+  // id
+  public function setID ($idoutrasformacoes) {
+    $this->idoutrasformacoes = $idoutrasformacoes;
+  }
+
+  public function getID() {
+    return $this->idoutrasformacoes;
+  }
+
+  // idusuario
+  public function setIdUsuario ($idusuario) {
+    $this->idusuario = $idusuario;
+  }
+
+  public function getIdUsuario() {
+    return $this->idusuario;
+  }
+
+  // inicio
+  public function setInicio ($inicio) {
+    $this->inicio = $inicio;
+  }
+
+  public function getInicio() {
+    return $this->inicio;
+  }
+
+  // fim
+  public function setFim ($fim) {
+    $this->fim = $fim;
+  }
+
+  public function getFim() {
+    return $this->fim;
+  }
+
+  // descrição
+  public function setDescricao ($descricao) {
+    $this->descricao = $descricao;
+  }
+
+  public function getDescricao() {
+    return $this->descricao;
+  }
+
+  // Método inserirBD()
+
+  public function inserirBD() {
+    require_once 'Conexao.php';
+
+    $con = new ConexaoBD();
+    $conn = $con->conectar();
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO outrasformacoes (idusuario, inicio, fim, descricao)
+    VALUES('".$this->idusuario."', '".$this->inicio."','". $this->fim."', '".$this->descricao."')";
+
+    if ($conn->query($sql) === TRUE) {
+      $this->idoutrasformacoes = mysqli_insert_id($conn);
+      $conn->close();
+      return TRUE;
+    } else {
+      $conn->close();
+      return FALSE;
+    }
+  }
+
+  // Método excluirBD()
+
+  public function excluirBD($idoutrasformacoes) {
+
+    require_once 'ConexaoBD';
+
+    $con = new ConexaoBD();
+    $conn = $con->conectar();
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "DELETE FROM outrasformacoes WHERE idoutrasformacoes = '".$idoutrasformacoes ."';";
+
+    if ($conn->query($sql) === TRUE) {
+      $this->idoutrasformacoes = mysqli_insert_id($conn);
+      $conn->close();
+      return TRUE;
+    } else {
+      $conn->close();
+      return FALSE;
+    }
+  }
+
+  
+  // Método listaFormacoes()
+
+  public function listaFormacoes($idusuario) {
+
+    require_once 'ConexaoBD.php';
+
+    $con = new ConexaoBD();
+    $conn = $con->conectar();
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM outrasformacoes WHERE idusuario = '".$idusuario."'";
+    $re = $conn->query($sql);
+    $conn->close();
+    return $re;
+  }
+}
+~~~
 
 ---
 
