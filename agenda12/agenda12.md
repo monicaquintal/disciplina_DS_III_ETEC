@@ -29,7 +29,7 @@
 
 - criar o arquivo login.php:
 
-~~~php
+~~~html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -90,7 +90,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
   - txtSenha: input do tipo password.
   - btnCadastrar: button para realizar o cadastro.
 
-~~~php
+~~~html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -163,7 +163,7 @@ style="width: 600px">
   - Dados Pessoais: link para indexar a parte referente a dados pessoais do usuário.
   - Formação: indexador da parte referente à formação acadêmica do usuário.
 
-~~~php
+~~~html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -215,7 +215,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 
 ### b) Etapa 2 - Home:
 
-~~~php
+~~~html
 <header class="w3-container w3-padding-32 w3-center" id="home">
   <img src="../Assets/images/logo-sistema-cvs.png" alt="Logo" class="w3-image" width="20%">
   </br>
@@ -235,7 +235,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
   - txtEmail: input do tipo text.
   - btnAtualizar: button realizar o cadastro.
 
-~~~php
+~~~html
 <div class="w3-padding-128 w3-content w3-text-grey" id="dPessoais">
   <h2 class="w3-text-cyan">Dados Pessoais</h2>
   <form action="" method="post" class=" w3-row w3-light-grey w3-text-blue w3-margin w3-round-large" style="width:70%;">
@@ -266,7 +266,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
   - Descrição: apresentará a descrição e a formação cadastrada pelo usuário.
   - Apagar: exibirá um botão para ser possível apagar essas formações.
 
-~~~php
+~~~html
 <div class="w3-padding-128 w3-content w3-text-grey" id="formacao">
   <h2 class="w3-text-cyan">Formação</h2>
   <form action="" method="post" class="w3-round-large w3-row w3-light-grey w3-text-blue w3-margin" style="width:70%;">
@@ -334,7 +334,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 - são chamadas "Interfaces secundárias" por serem de caráter informativo para o usuário e servirem para redirecionar a navegação pelo projeto. 
 - todas devem ter a mesma estrutura html:
 
-~~~php
+~~~html
 <!DOCTYPE html>
 <html lang=" pt-BR ">
 <head>
@@ -353,7 +353,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 
 - todas terão um formulário com botão:
 
-~~~php
+~~~html
 <form action="" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" style="width: 30%;">
   <div class="w3-row w3-section">
     <div>
@@ -368,7 +368,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
   - texto do botão.
 
 - para cada interface será criado um arquivo PHP na pasta model.
-  - 1. Cadastro realizado com sucesso / não realizado;
+  - 1. Cadastro realizado com sucesso / não realizado.
   - 2. Atualização realizada com sucesso.
   - 3. Informação inserida com sucesso.
   - 4. Informação excluída com sucesso.
@@ -379,7 +379,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 - Name botão - btnCadRealizado.
 - Texto - Cadastro Realizado com sucesso!
 
-~~~php
+~~~html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -409,7 +409,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 - Name: btnAtualizacaoCadastro.
 - Texto: Atualização Realizada com sucesso!
 
-~~~php
+~~~html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -439,7 +439,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 - Name – btnCadNaoRealizado.
 - Texto – Cadastro não realizado!
 
-~~~php
+~~~html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -464,14 +464,207 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 </html>
 ~~~
 
-### 4. 
+### 4. Informação Inserida com sucesso:
+- Nome arquivo do PHP: informacaoInserida.php.
+- Name: btnInfInserir.
+- Texto: Atualização Realizada com sucesso!
 
+~~~html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0"> <meta
+http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+<title>Enlatados Juarez</title>
+</head>
+<body class="">
 
+<form action="" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" style="width: 30%;">
+  <div class="w3-row w3-section">
+    <button name="btnInfInserir" class="w3-button w3-block w3-margin w3-blue w3-cell w3-round-large" style="width: 90%;">
+      Inclusão realizada com sucesso!
+    </button> 
+  </div>
+</form>
 
+</body>
+</html>
+~~~
 
+### 5. Informação excluída com sucesso:
+- Nome do arquivo PHP: informacaoExcluida.php.
+- Name: btnInfExcluir.
+- Texto: Exclusão Realizada Com Sucesso.
 
+~~~html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0"> <meta
+http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+<title>Enlatados Juarez</title>
+</head>
+<body class="">
 
+<form action="" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" style="width: 30%;">
+  <div class="w3-row w3-section">
+    <button name="btnInfExcluir" class="w3-button w3-block w3-margin w3-blue w3-cell w3-round-large" style="width: 90%;">
+      Exclusão realizada com sucesso!
+    </button> 
+  </div>
+</form>
 
+</body>
+</html>
+~~~
+
+### 6. Operação não realizada:
+- Nome do arquivo PHP: operacaoNaoRealizada.php.
+- Name: btnOperacaoNRealizada.
+- Texto: Operação não realizada!
+
+~~~html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0"> <meta
+http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+<title>Enlatados Juarez</title>
+</head>
+<body class="">
+
+<form action="" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" style="width: 30%;">
+  <div class="w3-row w3-section">
+    <button name="btnOperacaoNRealizada" class="w3-button w3-block w3-margin w3-blue w3-cell w3-round-large" style="width: 90%;">
+      Operação não realizada!
+    </button> 
+  </div>
+</form>
+
+</body>
+</html>
+~~~
+
+<div align="center">
+<h2>VOCÊ NO COMANDO</h2>
+</div>
+
+1. Dentro do arquivo principal, crie uma outra divisão que servirá para inserção e remoção de experiências profissionais do usuário.
+2. Dentro da divisão deverão ser desenvolvidos:
+- a. Formulário contendo:
+  - i. txtInicioEP –input tipo date;
+  - ii. txtFimEP – input tipo date;
+  - iii. txtEmpEP – input tipo text;
+  - iv. txtDescEP – input tipo text;
+  - v. btnAddEP – button;
+- b. Tabela com os títulos:
+  - i. Início 
+  - ii. Fim 
+  - iii. Empresa 
+  - iv. Descrição 
+  - v. Apagar
+
+~~~php
+<!-- Experiência Profissional -->
+<div class="w3-padding-128 w3-content w3-text-grey" id="eProfissional">
+  <h2 class="w3-text-cyan">Experiência Profissional</h2>
+  <form action=" " method="post" class="w3-round-large w3-row w3-light-grey w3-text-blue w3-margin" style="width: 70%;">
+    <div class="w3-row w3-center">
+      <div class="w3-col" style="width:50%;">
+        Data Inicial
+      </div>
+      <div class="w3-res">
+        Data Final
+      </div>
+    </div>
+  <div class="w3-row w3-section">
+  <div class="w3-row w3-section w3-col" style="width:45%;">
+    <div class="w3-col" style="width:15%;">
+      <i class="w3-xxlarge fa fa-calendar"></i>
+    </div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border w3-round-large" name="txtInicioEP" type="date" placeholder="">
+    </div>
+  </div>
+  <div class="w3-row w3-section w3-rest">
+    <div class="w3-col w3-margin-left" style="width:13%;">
+      <i class="w3-xxlarge fa fa-calendar"></i>
+    </div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border w3-round-large" name="txtFimEP" type="date" placeholder="">
+    </div>
+  </div>
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:7%;">
+        <i class="w3-xxlarge fa fa-align-justify"></i>
+      </div>
+      <div class="w3-rest">
+        <input class="w3-input w3-border w3-round-large" name="txtEmpEP" type="text" placeholder="Centro Paula Souza">
+      </div>
+    </div>
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:7%;">
+        <i class="w3-xxlarge fa fa-align-justify"></i>
+      </div>
+      <div class="w3-rest">
+        <input class="w3-input w3-border w3-round-large" name="txtDescEP" type="text" placeholder="Descrição: Ex.: Técnico em Desenvolvimento de Sistemas - Desenvolvimento de Páginas WEB">
+      </div>
+    </div>
+    <div class="w3-row w3-section">
+      <div class="w3-center">
+        <button name="btnAddEP" class="w3-button w3-block w3-blue w3-cell w3-round-large" style="width: 20%;">
+          <i class="w3-xxlarge fa fa-user-plus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="w3-container">
+  <table class="w3-table-all w3-centered">
+    <thead>
+      <tr class="w3-center w3-blue">
+      <th>Início</th>
+      <th>Fim</th>
+      <th>Empresa</th>
+      <th>Descrição</th>
+      <th>Apagar</th>
+    </thead>
+
+    <?php
+
+    $ePro = new ExperienciaProfissionalController();
+    $results = $ePro->gerarLista(unserialize($_SESSION['Usuario'])->getID());if($results != null)
+    
+    while ($row = $results->fetch_object()) {
+      echo '<tr>';
+      echo '<td style="width: 10%;">'.$row->inicio.'</td>';
+      echo '<td style="width: 10%;">'.$row->fim.'</td>'; 
+      echo '<td style="width: 10%;">'.$row->empresa.'</td>';
+      echo '<td style="width: 65%;">'.$row->descricao.'</td>';
+      echo '<td style="width: 5%;">
+        <form action="/Controller/Navegacao.php" method="post">
+        <input type="hidden" name="idEP" value="'.$row->idexperienciaprofissional.'">
+        <button name="btnExcluirEP" class="w3-button w3-block w3-blue w3-cell w3-round-large">
+        <i class="fa fa-user-times"></i> </button></td>
+        </form>';
+      echo '</tr>';
+    }
+
+    ?>
+
+  </table>
+</div>
+~~~
 
 
 
