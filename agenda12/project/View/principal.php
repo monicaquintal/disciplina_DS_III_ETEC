@@ -38,6 +38,10 @@ http-equiv="X-UA-Compatible" content="ie=edge">
     <i class="fa fa-graduation-cap w3-xxlarge"></i>
     <p>Formação</p>
   </a>
+  <a href="#outrasFormacoes" class="w3-bar-item w3-button w3-block n w3-cell w3-hover-light-grey w3-hover-text-cyan w3-text-light-grey">
+    <i class="fa fa-graduation-cap w3-xxlarge"></i>
+    <p>Outras Formações</p>
+  </a>
 </nav>
 
 <!-- Conteúdo principal -->
