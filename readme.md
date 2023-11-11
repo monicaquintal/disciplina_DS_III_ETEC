@@ -35,3 +35,4 @@ Mais PHP [aqui](https://github.com/monicaquintal/disciplina_DS_II_ETEC), [aqui](
 [Agenda 11: Projeto Completo Camada Model.](./agenda11/agenda11.md)<br>
 [Agenda 12: Projeto Completo Camada View.](./agenda12/agenda12.md)<br>
 [Agenda 13: Projeto Completo Camada Controller.](./agenda13/agenda13.md)<br>
+[Agenda 14: Módulo Administrador - Atualização MVC.](./agenda14/agenda14.md)<br>
