@@ -75,33 +75,112 @@ public function getID() {
 }
 
 // Nome
-public function setNome($nome)
-{
-$this->nome = $nome;
+public function setNome($nome) {
+  $this->nome = $nome;
 }
-public function getNome()
-{
-return $this->nome;
+
+public function getNome() {
+  return $this->nome;
 }
-//cpf
-public function setCPF($cpf)
-{
-$this->cpf = $cpf;
+
+// cpf
+public function setCPF($cpf) {
+  $this->cpf = $cpf;
 }
-public function getCPF()
-{
-return $this->cpf;
+
+public function getCPF() {
+  return $this->cpf;
 }
+
 // Senha
-public function setSenha($senha)
-{
-$this->senha = $senha;
+public function setSenha($senha) {
+  $this->senha = $senha;
 }
-public function getSenha()
-{
-return $this->senha;
+
+public function getSenha() {
+  return $this->senha;
 }
 ~~~
+
+- desenvolver um método específico, que será o carregarAdministrador.
+
+~~~php
+public function carregarAdministrador($cpf) {
+  require_once 'ConexaoBD.php';
+  $con = new ConexaoBD();
+  $conn = $con->conectar();
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  $sql = "SELECT * FROM administrador WHERE cpf = ".$cpf ;
+  $re = $conn->query($sql);
+  $r = $re->fetch_object();
+  if($r != null) {
+    $this->id = $r->idadministrador;
+    $this->nome = $r->nome;
+    $this->cpf = $r->cpf;
+    $this->senha = $r->senha;
+    $conn->close();
+    return true;
+  } else {
+    $conn->close();
+    return false;
+  }
+}
+~~~
+
+- este método segue o mesmo padrão dos que foram desenvolvidos nas agendas anteriores:
+  - inclusão da Classe ConexaoBD.
+  - instância do Objeto da Classe ConexãoBD.
+  - conexão ao Banco de Dados, com verificação do sucesso ou não.
+  - confeção da sentença SQL.
+  - execução da sentença com verificação do sucesso ou não.
+
+### Importante:
+
+- como foi solicitado para que seja possível listar todos os usuários, realizar uma atualização na `classe Usuário`, que sofrerá a inclusão de um novo
+método específico:
+
+~~~php
+public function listaCadastrados() {
+  require_once 'ConexaoBD.php';
+  $con = new ConexaoBD();
+  $conn = $con->conectar();
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  $sql = "SELECT idusuario, nome FROM usuario;" ;
+  $re = $conn->query($sql);
+  $conn->close();
+  return $re;
+}
+~~~
+
+- este método segue o mesmo padrão:
+  - inclusão da Classe ConexaoBD.
+  - instância do Objeto da Classe ConexãoBD.
+  - conexão ao Banco de Dados, com verificação do sucesso ou não.
+  - confeção da sentença SQL.
+- porém, este método retorna o resultado da consulta do Banco de Dados que pode ser um ou mais registros.
+- serão retornados todos os usuários cadastrados na tabela usuário.
+
+## 2. Camada View
+
+- criar a camada View para apresentar e interagiar com o usuário final, possibilitando a visualização do projeto.
+- toda a interface faz parte dessa camada: os dados, as informações e os gráficos.
+- desenvolver as seguintes páginas (Interfaces):
+  - Login: Página para o administrador inserir seu CPF e senha para acessar o conteúdo do painel.
+  - Principal: Página central que gerenciará todas as informações do usuário.
+  - Listar Cadastrados: fará uma lista com todos os usuários cadastrados.
+
+### a) Interface Login:
+
+- será responsável por realizar a interação com o administrador, por meio do login.
+- o CPF será “login”.
+- criar o arquivo PHP denominado ADMLogin.
+- o desenvolvimento desta interface será baseado no mesmo layout do login do usuário, com algumas pequenas mudanças:
+
+
 
 
 
