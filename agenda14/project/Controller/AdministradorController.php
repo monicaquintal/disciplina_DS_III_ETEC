@@ -19,5 +19,11 @@
         return false;
       }
     }
+
+    public function gerarLista() {
+      require_once '../Model/Administrador.php';
+      $u = new Administrador();
+      return $results = $u->listaCadastrados();
+    }
   }
 ?>

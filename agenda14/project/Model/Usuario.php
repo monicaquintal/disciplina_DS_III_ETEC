@@ -91,31 +91,31 @@
 
     public function carregarUsuario($cpf) {
 
-      require_once 'ConexaoBD.php';
+    require_once 'ConexaoBD.php';
 
-      $con = new ConexaoBD();
-      $conn = $con->conectar();
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
+    $con = new ConexaoBD();
+    $conn = $con->conectar();
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
 
-      $sql = "SELECT * FROM usuario WHERE cpf = ".$cpf;
-      $re = $conn->query($sql);
-      $r = $re->fetch_object();
-      
-      if($r != null) {
-        $this->id = $r->idusuario;
-        $this->nome = $r->nome;
-        $this->email = $r->email;
-        $this->cpf = $r->cpf;
-        $this->dataNascimento = $r->dataNascimento;
-        $this->senha = $r->senha;
-        $conn->close();
-        return true;
-      } else {
-        $conn->close();
-        return false;
-      } 
+    $sql = "SELECT * FROM usuario WHERE cpf = ".$cpf;
+    $re = $conn->query($sql);
+    $r = $re->fetch_object();
+    
+    if($r != null) {
+      $this->id = $r->idusuario;
+      $this->nome = $r->nome;
+      $this->email = $r->email;
+      $this->cpf = $r->cpf;
+      $this->dataNascimento = $r->dataNascimento;
+      $this->senha = $r->senha;
+      $conn->close();
+      return true;
+    } else {
+      $conn->close();
+      return false;
+    } 
     }
 
     // método atualizarBD()
@@ -142,20 +142,45 @@
       }
     }
 
-    // // método listar
-    // public function listaCadastrados() {
+    // método listar
+    public function listaCadastrados() {
+      require_once 'ConexaoBD.php';
+      $con = new ConexaoBD();
+      $conn = $con->conectar();
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+      $sql = "SELECT idusuario, nome FROM usuario;" ;
+      $re = $conn->query($sql);
+      $conn->close();
+      return $re;
+    }
+
+    // public function exibirUsuario($idusuario) {
     //   require_once 'ConexaoBD.php';
+
     //   $con = new ConexaoBD();
     //   $conn = $con->conectar();
     //   if ($conn->connect_error) {
     //     die("Connection failed: " . $conn->connect_error);
     //   }
-    //   $sql = "SELECT idusuario, nome FROM usuario;" ;
-    //   $re = $conn->query($sql);
-    //   $conn->close();
-    //   return $re;
-    // }
 
+    //   $sql = "SELECT * FROM usuario WHERE idusuario = ".$idusuario;
+    //   $re = $conn->query($sql);
+    //   $r = $re->fetch_object();
+      
+    //   if ($conn->query($sql) === TRUE) {
+    //     $this->id = $r->idusuario;
+    //     $this->nome = $r->nome;
+    //     $this->email = $r->email;
+    //     $this->cpf = $r->cpf;
+    //     $this->dataNascimento = $r->dataNascimento;
+    //     $conn->close();    
+    //     return TRUE;
+    //   } else {
+    //     $conn->close();
+    //     return FALSE;
+    //   }
+    // } 
   }
-  
 ?>

@@ -442,10 +442,127 @@ if($results != null)
   echo '</tr>';
 ~~~
 
+- codificar o clique no botão btnVoltar do arquivo ADMListarCadastrados:
 
+~~~php
+if(isset($_POST[“btnVoltar”])) {
+  include_once '../View/ADMPrincipal.php';
+}
+~~~
 
+---
 
+## Você no Comando
 
+- criar uma listagem de usuários administradores no mesmo formato dos usuários cadastrados. 
+- criar ou atualizar as camadas Model, View e Controller para que seja possível realizar a atualização, devendo apresentar: Código, Nome e CPF.
+- dicas:
+  - utilizar as classes Usuario e UsuarioController como base para desenvolvimento.
+  - não esquecer da action dos formulários.
+  - não esquecer de codificar as ações para os eventos de clique do botão voltar.
+
+### 1. Alterações na Classe Administrador da camada Model: Criação de método listar Cadastrados.
+
+~~~php
+public function listaCadastrados() {
+  require_once 'ConexaoBD.php';
+  $con = new ConexaoBD();
+  $conn = $con->conectar();
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  $sql = "SELECT idadministrador, nome, cpf FROM administrador;" ;
+  $re = $conn->query($sql);
+  $conn->close();
+  return $re;
+}
+~~~
+
+### 2. Alterações na Classe AdministradorController da camada Controller: Criação de método GerarLista.
+
+~~~php
+public function gerarLista() {
+  require_once '../Model/Administrador.php';
+  $u = new Administrador();
+  return $results = $u->listaCadastrados();
+}
+~~~
+
+### 3. Interface ADMListarAdministradores da camada View.
+
+~~~php
+  include_once '../Model/Administrador.php';
+  include_once '../Controller/AdministradorController.php';
+  if(!isset($_SESSION)) {
+    session_start();
+  }
+
+<header class="w3-container w3-padding-32 w3-center ">
+  <h1 class="w3-text-white w3-panel w3-cyan w3-round-large">
+    Lista de Administradores Cadastrados no Sistema
+  </h1>
+</header>
+
+<div class="w3-padding-128 w3-content w3-text-grey">
+  <div class="w3-container">
+    <table class="w3-table-all w3-centered">
+      <thead>
+        <tr class="w3-center w3-blue">
+          <th>Código</th>
+          <th>Nome</th>
+          <th>CPF</th>
+        </tr>
+      <thead>
+
+        $adm = new AdministradorController();
+        $results = $adm->gerarLista();
+        if($results != null)
+
+        while($row = $results->fetch_object()) {
+        echo '<tr>';
+        echo '<td style="width: 1%;">'.$row->idadministrador.'</td>';
+        echo '<td style="width: 50%;">'.$row->nome.'</td>';
+        echo '<td style="width: 50%;">'.$row->cpf.'</td>';
+        echo '</tr>';
+        }
+
+    </table>
+  </div>
+</div>
+
+<div class="w3-padding-128 w3-content w3-text-grey">
+  <form action="/Controller/navegacao.php" method="post" class="w3-container w3-light-grey w3-textblue w3-margin w3-center" style="width: 30%;">
+    <div class="w3-row w3-section">
+      <div>
+        <button name="btnVoltar" class="w3-button w3-block w3-margin w3-blue w3-cell w3-roundlarge" style="width: 90%;">
+        Voltar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+~~~
+
+--- 
+
+## Fichário
+
+"Bia esteve em reunião com o setor de RH. Os gerentes ficaram satisfeitos como o sistema e pediram uma última atualização: que após listar os usuários cadastrados, consigam clicar em um botão e ver todos os dados desses usuários.
+<br>
+Na página ADMListarCadastrado, adicione um botão para cada usuário com a função de redirecionar o administrador a uma página com todas as informações deste usuário e atualizar o layout da página, conforme o exemplo.
+
+- Crie uma página denominada ADMVisualizarCadastro.
+  - Exiba as informações do usuário selecionado pelo administrador por meio do clique no botão visualizar correspondente.
+  - Você é livre para fazer o layout, porém anexado modelo.
+- Codifique um botão para voltar à página AMDListarCadastrados.
+
+### Dicas:
+
+- Utilize como exemplo:
+  - As classes FormaçãoAcadêmicaController e Experiência profissional como base para o desenvolvimento.
+  - Layout Principal.
+  - Não se esqueça que você pode atualizar classes e métodos para facilitar seu desenvolvimento.
 
 ---
 

@@ -35,6 +35,11 @@
       <i class="fa fa-address-book w3-xxlarge"></i><br>
       <p class="w3-xlarge">Usuários<br>Cadastrados</p>
       </button>
+      <button name="btnListarAdministradores" class="w3-button w3-margin w3-blue w3-cell w3-round-large">
+      <br>
+      <i class="fa fa-address-book w3-xxlarge"></i><br>
+      <p class="w3-xlarge">Administradores<br>Cadastrados</p>
+      </button>
     </form>
   </div>
 

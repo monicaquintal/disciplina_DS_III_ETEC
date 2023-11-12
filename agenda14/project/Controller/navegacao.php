@@ -179,11 +179,31 @@ switch ($_POST) {
       
         case isset($_POST['btnADM']):
           include_once '../View/admLogin.php';
-        
+        break;
+
         case isset($_POST['btnListarCadastrados']):
           include_once '../View/admListarCadastrados.php';
-        }
+        break;
+        
+        case isset($_POST['btnVoltar']):
+          include_once '../View/admPrincipal.php';
+        break; 
 
-      
+        case isset($_POST['btnListarAdministradores']):
+          include_once '../View/admListarAdministradores.php';
+        break;
+
+        case isset($_POST['btnVoltarAdm']):
+          include_once '../View/admPrincipal.php';
+        break; 
+
+        case isset($_POST['btnVisualizar']):
+          if (isset($_POST['idusuario'])) {
+            $idusuario = $_POST['idusuario'];
+            include_once '../View/admVisualizarCadastro.php';
+          }
+          break; 
+  
+      }
         
 ?>

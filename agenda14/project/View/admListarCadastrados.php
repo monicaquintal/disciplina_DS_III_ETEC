@@ -32,28 +32,39 @@
           <tr class="w3-center w3-blue">
             <th>Código</th>
             <th>Nome</th>
+            <th>Visualizar</th>
           </tr>
         <thead>
+
           <?php 
-            // $usuario = new UsuarioController();
-            // $results = $usuario->gerarLista();
-            // if($results != null)
-            //   while($row = $results->fetch_object()) {
-            //   echo '<tr>';
-            //   echo '<td style="width: 1%;">'.$row->idusuario.'</td>';
-            //   echo '<td style="width: 50%;">'.$row->nome.'</td>';
-            //   echo '</tr>';
-            //   }
+            $usuario = new UsuarioController();
+            $results = $usuario->gerarLista();
+            if($results != null)
+              while($row = $results->fetch_object()) {
+              echo '<tr>';
+              echo '<td style="width: 1%;">'.$row->idusuario.'</td>';
+              echo '<td style="width: 50%;">'.$row->nome.'</td>';
+              echo '<td style="width: 50%;">
+                      <form action="../Controller/navegacao.php" method="post">
+                        <input type="hidden" name="idusuario" value="' . $row->idusuario . '">
+                        <button name="btnVisualizar" class="w3-button w3-center w3-blue w3-round-large" style="width: 30%;">
+                          <i class="fa fa-print"></i>
+                        </button>
+                      </form>
+                    </td>';
+              echo '</tr>';
+              }
           ?>
+
       </table>
     </div>
   </div>
 
-  <div class="w3-padding-128 w3-content w3-text-grey w3-center">
-    <form action="../Controller/navegacao.php" method="post" class="w3-container w3-light-grey w3-text-blue w3-margin " style="width: 30%;">
+  <div class="w3-block w3-padding-128 w3-content w3-text-grey w3-center">
+    <form action="../Controller/navegacao.php" method="post" class="w3-container w3-text-blue w3-margin" style="width: 97%;">
       <div class="w3-row w3-section">
         <div class="">
-          <button name="btnVoltar" class="w3-button w3-block w3-margin w3-blue w3-cell w3-round-large" style="width: 90%;">
+          <button name="btnVoltar" class="w3-button w3-block w3-margin w3-blue w3-cell w3-round-large " style="width: 50%;">
             Voltar
           </button>
         </div>

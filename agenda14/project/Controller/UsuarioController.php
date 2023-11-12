@@ -53,10 +53,29 @@
       return $r;
     }
 
-    // public function gerarLista() {
-    //   require_once '../Model/Usuario.php';
-    //   $u = new Usuario();
-    //   return $results = $u->listaCadastrados();
-    //   }
+    public function gerarLista() {
+      require_once '../Model/Usuario.php';
+      $u = new Usuario();
+      return $results = $u->listaCadastrados();
+      }
+  
+      // public function exibirUsuarioIndividualmente() {
+      //   require_once '../Model/Usuario.php';
+      //   $u = new Usuario();
+      //   return $result = $u->exibirUsuario($idusuario);
+      // }
+
+      //   $usuario = new Usuario();
+      //   $usuario->getId();
+      //   $usuario->getNome();
+      //   $usuario->getCPF();
+      //   $usuario->getDataNascimento();
+      //   $usuario->getEmail();
+
+      //   $r = $usuario->exibirUsuario($idusuario);
+      //   $_SESSION['Usuario'] = serialize($usuario);
+      //   return $r;
+      // }
+
   }
 ?>
