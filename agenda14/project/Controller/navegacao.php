@@ -4,6 +4,10 @@ if(!isset($_SESSION)) {
   session_start();
 }
 
+if(isset($_POST["btnADM"])) {
+  include_once '../View/admLogin.php';
+}
+
 switch ($_POST) {
   //Caso a variavel seja nula mostrar tela de login
   case isset($_POST[""]):
@@ -162,19 +166,24 @@ switch ($_POST) {
             include_once "../View/operacaoNaoRealizada.php";
           }
           break;
-          
-          if(isset($_POST["btnADM"])) {
-            include_once '../View/admLogin.php';
-          }
-
-          if (isset($_POST["btnLoginADM"])) 
-          require_once '../Controller/AdministradorController.php';
+        
+        //--- Login Administrador ---//
+        case isset($_POST['btnLoginADM']):
+          require_once "../Controller/AdministradorController.php";
           $aController = new AdministradorController();
 
           if($aController->login($_POST['txtLoginADM'], $_POST['txtSenhaADM'])) {
             include_once '../View/admPrincipal.php';
-          } else {}    
-
+          }
+          break;
+      
+        case isset($_POST['btnADM']):
+          include_once '../View/admLogin.php';
+        
+        case isset($_POST['btnListarCadastrados']):
+          include_once '../View/admListarCadastrados.php';
         }
 
+      
+        
 ?>

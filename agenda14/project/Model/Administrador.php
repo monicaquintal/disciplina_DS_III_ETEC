@@ -47,7 +47,7 @@ class Administrador {
   // método carregarAdministrador
 
   public function carregarAdministrador($cpf) {
-    require_once 'ConexaoBD.php';
+    require_once '../Model/ConexaoBD.php';
 
     $con = new ConexaoBD();
     $conn = $con->conectar();
@@ -72,13 +72,6 @@ class Administrador {
       return false;
     }
   }
-
-
-
-
-
-
-
 }
 
 

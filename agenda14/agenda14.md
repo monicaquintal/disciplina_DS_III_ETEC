@@ -409,6 +409,38 @@ if(isset($_POST["btnADM"])) {
 }
 ~~~
 
+### b) Listar Cadastros:
+
+- criar um desvio condicional para quando for pressionado o botão Usuários Cadastrados, na página principal, o usuário seja redirecionado para a página ListarCadastrados:
+
+~~~php
+if(isset($_POST["btnListarCadastrados"])) {
+  include_once '../View/ADMListarCadastrados.php';
+}
+~~~
+
+- codificar as ligações com as classes que serão utilizadas junto a abertura de sessão:
+
+~~~php
+include_once '../Model/Usuario.php';
+include_once '../Controller/UsuarioController.php';
+if(!isset($_SESSION)) {
+  session_start();
+}
+~~~
+
+- fazer a seguinte codificação dentro da tabela já definida anteriormente:
+
+~~~php
+$usuario = new UsuarioController();
+$results = $usuario->gerarLista();
+if($results != null)
+  while($row = $results->fetch_object()) {
+  echo '<tr>';
+  echo '<td style="width: 1%;">'.$row->idusuario.'</td>';
+  echo '<td style="width: 50%;">'.$row->nome.'</td>';
+  echo '</tr>';
+~~~
 
 
 

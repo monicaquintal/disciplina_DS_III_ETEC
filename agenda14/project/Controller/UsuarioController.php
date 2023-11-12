@@ -52,5 +52,11 @@
       $_SESSION['Usuario'] = serialize($usuario);
       return $r;
     }
+
+    // public function gerarLista() {
+    //   require_once '../Model/Usuario.php';
+    //   $u = new Usuario();
+    //   return $results = $u->listaCadastrados();
+    //   }
   }
 ?>
