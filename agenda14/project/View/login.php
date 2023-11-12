@@ -11,7 +11,7 @@ http-equiv="X-UA-Compatible" content="ie=edge">
 <body class="">
 
 <div class="">
-<form action="Controller/navegacao.php" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" style="width: 600px;">
+<form action="../Controller/navegacao.php" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin w3-display-middle" style="width: 600px;">
     <input type="hidden" name="nome_form" value="frmLogin" />
     <h1 class="w3-center">Login</h1>
     <div class="w3-row w3-section">
@@ -32,6 +32,9 @@ http-equiv="X-UA-Compatible" content="ie=edge">
         </div>
       <div class="w3-half">
         <button name="btnPrimeiroAcesso" class="w3-button w3-block w3-margin w3-blue w3-cell w3-round-large" style="width: 90%;">Primeiro Acesso?</button>
+      </div>
+      <div class="w3-center">
+        <button name="btnADM" class="w3-button w3-block w3-margin w3-blue w3-cell w3-round-large" style="width: 95%;">Login como Administrador</button>
       </div>
     </div>
   </form>

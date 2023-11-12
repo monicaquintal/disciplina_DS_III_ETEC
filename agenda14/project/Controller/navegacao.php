@@ -162,12 +162,19 @@ switch ($_POST) {
             include_once "../View/operacaoNaoRealizada.php";
           }
           break;
-      
-}
+          
+          if(isset($_POST["btnADM"])) {
+            include_once '../View/admLogin.php';
+          }
 
+          if (isset($_POST["btnLoginADM"])) 
+          require_once '../Controller/AdministradorController.php';
+          $aController = new AdministradorController();
 
+          if($aController->login($_POST['txtLoginADM'], $_POST['txtSenhaADM'])) {
+            include_once '../View/admPrincipal.php';
+          } else {}    
 
-
-
+        }
 
 ?>
