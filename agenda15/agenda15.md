@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-<h2>Agenda 15: Criptografia em dados PHP</h2>
+<h2>Agenda 15: Criptografia em dados PHP.</h2>
 </div>
 
 <div align="center">
