@@ -37,3 +37,4 @@ Mais PHP [aqui](https://github.com/monicaquintal/disciplina_DS_II_ETEC), [aqui](
 [Agenda 13: Projeto Completo Camada Controller.](./agenda13/agenda13.md)<br>
 [Agenda 14: Módulo Administrador - Atualização MVC.](./agenda14/agenda14.md)<br>
 [Agenda 15: Criptografia em dados PHP.](./agenda15/agenda15.md)<br>
+[Agenda 16: Web Services gratuitos.](./agenda16/agenda16.md)<br>
