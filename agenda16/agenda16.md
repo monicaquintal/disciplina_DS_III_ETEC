@@ -61,14 +61,94 @@
 
 1. criar dois arquivos na pasta root do servidor apache: [index.php](./projects/cep/index.php) e [buscarCEP.php](./projects/cep/buscarCep.php).
 
+2. utilizar uma URL como: viacep.com.br/ws/14000000/xml/, sendo:
+  - viacep.com.br/: nome do site.
+  - ws: indicação para o webService.
+  - 14000000: parâmetro de Busca CEP.
+  - xml: formato da resposta XML.
+Criar uma função denominada get_endereco, fazendo a alusão aos métodos getters de uma classe; o método terá um parâmetro denominado CEP, através do qual será inserido o CEP na URL.
 
+3. garantir que o CEP terá apenas números.
 
+4. montar a URL em uma variável.
+  - o CEP que for passado como parâmetro pela função será
+enviado pela URL. 
 
+5. usar o comando simplexml_load_file(), que fará a requisição ao Web
+Service e nos retornará um XML, que será atribuído em uma variável de mesmo nome.
 
+6. retornar o XML.
 
+7. criar uma variável "endereço", que receberá o retorno da função get_endereco e terá como parâmetro o conteúdo do input txtCEP.
+  - nesse momento, o contéudo da variável endereço é um XML, como no exemplo a seguir, retirado do viacep:
 
+~~~xml
+<?xml version="1.0" encoding="UTF-8"?>
+  <xmlcep>
+    <cep>01001-000</cep>
+    <logradouro>Praça da Sé</logradouro>
+    <complemento>lado ímpar</complemento>
+    <bairro>Sé</bairro>
+    <localidade>São Paulo</localidade>
+    <uf>SP</uf>
+    <unidade></unidade>
+    <ibge>3550308</ibge>
+    <gia>1004</gia>
+  </xmlcep>
+~~~
 
+- então, teremos algumas informações disponíveis como: CEP, Logradouro (rua, avenida etc), Complemento, Bairro, Localidade (cidade), UF (estado), entre outras.
+- portanto, basta acessar as informações desejadas e utiliza-las; tratar a variável como um objeto, e tratar como atributo cada item do XML.
 
+~~~php
+// Código-fonte do arquivo buscarCEP.php
+
+function get_endereco($cep) {
+  $cep = preg_replace("/[^0-9]/", "", $cep);
+  $url = "http://viacep.com.br/ws/$cep/xml/";
+  $xml = simplexml_load_file($url);
+  return $xml;
+}
+
+$endereco = get_endereco($_POST["txtCEP"]);
+
+echo "Rua: $endereco->logradouro";
+echo "<br>";
+echo "Complemento: $endereco->complemento";
+echo "<br>";
+echo "Bairro: $endereco->bairro";
+echo "<br>";
+echo "Cidade: $endereco->localidade";
+echo "<br>";
+echo "Estado: $endereco->uf";
+echo "<br>";
+echo "<br>";
+~~~
+
+---
+
+## Você no Comando
+
+1. Faça o download do arquivo da página de contatos do cleber.
+2. Faça com que o campo CEP tenha um botão ao seu lado. Ao ser clicado pelo usuário, os dados do endereço (Logradouro, Bairro, Cidade, Estados) do cliente sejam preenchidos nos campos correspondentes.
+Dicas:
+- Utilize no Formulário o Método Post.
+- No Action coloque “#”, isso fará que o formulário chame a própria página.
+- Utilize Session para armazenar informações vindas do web service.
+
+> Arquivo [voceNoComando.php](./projects/voce-no-comando/voceNoComando.php).
+---
+
+## Fichário
+
+- Juarez, proprietário e CEO da empresa multinacional Enlatados Juarez, gostou muito do trabalho que Sérgio fez para o e-commerce da lanchonete do seu amigo Cleber e o convidou para uma entrevista de emprego. Sérgio, então, terá que fazer uma apresentação sobre o funcionamento dos webservices para a equipe de TI da empresa.
+- Para estudar mais sobre o assunto e deixar seu conhecimento bem afiado, imagine que você também tenha que fazer essa apresentação para, quem sabe, fazer parte da equipe de TI da empresa. Para isso, será necessário abordar os conceitos e mostrar exemplos práticos.
+- Capriche nessa apresentação, mostrando as habilidades adquiridas.
+- Vamos lá?
+- Dicas:
+  - Para os exemplos práticos você pode criar vídeos explicando o passo a passo do funcionamento.
+  - Você pode desenvolver um site e usa-lo como apresentação.
+- Use sua imaginação e nos surpreenda!
 
 ---
 
