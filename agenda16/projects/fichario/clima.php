@@ -15,7 +15,7 @@
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cidade = $_POST["cidade"];
-        $api_key = "08f89e9ba3fe6cd0f75699871e575886";
+        $api_key = "API_KEY";
         $url = "https://api.openweathermap.org/data/2.5/weather?q=$cidade&APPID=$api_key&lang=pt_br";
 
         $response = file_get_contents($url);
