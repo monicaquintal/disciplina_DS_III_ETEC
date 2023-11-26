@@ -59,7 +59,7 @@
 
 ### a) Na prática:
 
-1. criar dois arquivos na pasta root do servidor apache: index.php e buscarCep.php.
+1. criar dois arquivos na pasta root do servidor apache: [index.php](./projects/cep/index.php) e [buscarCEP.php](./projects/cep/buscarCep.php).
 
 
 
