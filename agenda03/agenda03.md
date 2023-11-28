@@ -74,7 +74,7 @@ Android, em alguns computadores e em outros dispositivos. F
 
 "Envie para o seu tutor um vídeo mostrando a tela do celular com o projeto realizado por você na etapa “Você no comando”. É importante demonstrar as funcionalidades desenvolvidas até aqui.
 <br>
-Envie também o arquivo .aia. Aproveite para customizar o projeto “BancoSQL” com as suas cores e uma imagem escolhida por você."
+Envie também o arquivo .aia. Aproveite para customizar o projeto “BancoSQL” com as suas cores e uma imagem escolhida por você." *
 
 <div align="center">
   
