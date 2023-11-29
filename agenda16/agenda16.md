@@ -141,14 +141,14 @@ Dicas:
 
 ## Fichário
 
-- Juarez, proprietário e CEO da empresa multinacional Enlatados Juarez, gostou muito do trabalho que Sérgio fez para o e-commerce da lanchonete do seu amigo Cleber e o convidou para uma entrevista de emprego. Sérgio, então, terá que fazer uma apresentação sobre o funcionamento dos webservices para a equipe de TI da empresa.
+- "Juarez, proprietário e CEO da empresa multinacional Enlatados Juarez, gostou muito do trabalho que Sérgio fez para o e-commerce da lanchonete do seu amigo Cleber e o convidou para uma entrevista de emprego. Sérgio, então, terá que fazer uma apresentação sobre o funcionamento dos webservices para a equipe de TI da empresa.
 - Para estudar mais sobre o assunto e deixar seu conhecimento bem afiado, imagine que você também tenha que fazer essa apresentação para, quem sabe, fazer parte da equipe de TI da empresa. Para isso, será necessário abordar os conceitos e mostrar exemplos práticos.
 - Capriche nessa apresentação, mostrando as habilidades adquiridas.
 - Vamos lá?
 - Dicas:
   - Para os exemplos práticos você pode criar vídeos explicando o passo a passo do funcionamento.
   - Você pode desenvolver um site e usa-lo como apresentação.
-- Use sua imaginação e nos surpreenda!
+- Use sua imaginação e nos surpreenda!"
 
 ---
 
